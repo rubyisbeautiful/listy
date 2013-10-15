@@ -1,0 +1,25 @@
+<h1>Listing listy_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listy_lists.each do |listy_list| %>
+      <tr>
+        <td><%= link_to 'Show', listy_list %></td>
+        <td><%= link_to 'Edit', edit_listy_list_path(listy_list) %></td>
+        <td><%= link_to 'Destroy', listy_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Listy list', new_listy_list_path %>

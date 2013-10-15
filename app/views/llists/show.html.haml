@@ -1,0 +1,17 @@
+%p#notice= notice
+
+%div
+  %p= @llist.name
+
+%div.modal.fade#newLitem
+  = render :partial => 'litems/form'
+
+%div= link_to '+', "javascript:$('#newLitem').modal({show: true})"
+
+%div
+  - @llist.litems.each do |lli|
+    %div.panel.panel-default
+      %div.panel-heading
+        %h3.panel-title lli.name
+      %div.panel-body
+        notes go here
