@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131014175646) do
+ActiveRecord::Schema.define(version: 20131015175010) do
 
   create_table "litems", force: true do |t|
     t.string   "name"
@@ -19,14 +19,16 @@ ActiveRecord::Schema.define(version: 20131014175646) do
     t.integer  "llist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
   end
 
-  add_index "litems", ["llist_id"], name: "index_litems_on_llist_id"
+  add_index "litems", ["llist_id"], name: "index_litems_on_llist_id", using: :btree
 
   create_table "llists", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "current_litem_id"
   end
 
 end
