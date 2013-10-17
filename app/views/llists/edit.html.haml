@@ -1,0 +1,12 @@
+
+= render 'form'
+
+%div#wholeList
+  - @llist.litems.each do |lli|
+    %div.panel.panel-default
+      %div.panel-heading
+        %h3.panel-title= lli.name
+      %div.panel-body
+        notes go here
+
+= link_to 'Show', @llist

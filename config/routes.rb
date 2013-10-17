@@ -1,5 +1,8 @@
 Listy::Application.routes.draw do
   resources :llists do
+    member do
+      get 'next'
+    end
     resources :litems, :only => [ :new, :create ]
   end
 

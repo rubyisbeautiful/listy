@@ -1,17 +1,22 @@
 %p#notice= notice
 
-%div
-  %p= @llist.name
+%div.hero-unit
+  %div
+    %p= @llist.name
 
-%div.modal.fade#newLitem
-  = render :partial => 'litems/form'
+  %div.modal.fade#newLitem
+    = render :partial => 'litems/form'
 
-%div= link_to '+', "javascript:$('#newLitem').modal({show: true})"
+  %div= link_to '+', "javascript:$('#newLitem').modal({show: true})"
 
-%div
-  - @llist.litems.each do |lli|
-    %div.panel.panel-default
+  %div#current
+    %div.panel.panel-active
       %div.panel-heading
-        %h3.panel-title lli.name
+        %h3.panel-title= @llist.current_litem.name
       %div.panel-body
-        notes go here
+        &nbsp;
+
+  %div#litemPager
+    %ul.pager
+      %li.next
+        = link_to 'Next', next_llist_path(@llist)

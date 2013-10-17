@@ -1,5 +1,5 @@
 class LlistsController < ApplicationController
-  before_action :set_llist, only: [ :index, :show, :edit, :update, :destroy ]
+  before_action :set_llist, only: [ :index, :show, :next, :edit, :update, :destroy ]
 
   def index
     if @llist
@@ -12,6 +12,11 @@ class LlistsController < ApplicationController
 
 
   def show
+  end
+
+  def next
+    @llist.next_item
+    redirect_to llist_path(@llist)
   end
 
 
