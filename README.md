@@ -1,28 +1,35 @@
-== README
+# listy [![Build Status](https://travis-ci.org/rubyisbeautiful/listy.png)](https://travis-ci.org/rubyisbeautiful/listy)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+listy is for simple lists of things.  Lists can be random or ordered.  List items have counts, text, etc
 
-* Ruby version
+## Coming Soon
+* user auth and scope
+* edit in place
+* mobile
+* public/private
 
-* System dependencies
+## Installation
 
-* Configuration
+Add this line to your application's Gemfile:
 
-* Database creation
+    gem 'listy'
 
-* Database initialization
+And then execute:
 
-* How to run the test suite
+    $ bundle
 
-* Services (job queues, cache servers, search engines, etc.)
+Or install it yourself as:
 
-* Deployment instructions
+    $ gem install listy
 
-* ...
+## Usage
 
+## Contributing
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
