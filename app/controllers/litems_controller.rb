@@ -1,6 +1,6 @@
 class LitemsController < ApplicationController
   before_action :set_llist
-  before_action :set_litem, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_litem, only: %i( show edit update destroy done )
 
 
   def new
@@ -20,22 +20,31 @@ class LitemsController < ApplicationController
   end
 
 
+  def done
+    @litem.increment!(:count)
+    # TODO: ajax
+    redirect_to llist_path @llist
+  end
+
+
   private
 
 
 
   def set_llist
-    @llist = Llist.find(litem_params[:llist_id])
+    id = litem_params[:llist_id] rescue params[:llist_id]
+    @llist = Llist.find(id)
   end
 
 
   def set_litem
-    @litem = @llist.litems.find(litem_params[:id])
+    id = litem_params[:id] rescue params[:id]
+    @litem = @llist.litems.find(id)
   end
 
 
   def litem_params
-    params[:litem].permit([:name, :weight, :llist_id])
+    params[:litem].try(:permit, [:name, :weight, :llist_id])
   end
 
 end

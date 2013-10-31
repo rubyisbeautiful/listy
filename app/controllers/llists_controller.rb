@@ -14,8 +14,9 @@ class LlistsController < ApplicationController
   def show
   end
 
+
   def next
-    @llist.next_item
+    @llist.next_item!
     redirect_to llist_path(@llist)
   end
 
@@ -75,7 +76,7 @@ class LlistsController < ApplicationController
 
 
     def set_llist
-      @llist = Llist.first
+      @llist = Llist.find(params[:id])
     end
 
 

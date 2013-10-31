@@ -29,8 +29,8 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-zeus'
   gem 'html2haml'
-  gem "rb-inotify", require: false
-  gem "rb-fchange", require: false
+  gem 'rb-inotify', require: false
+  gem 'rb-fchange', require: false
   gem 'rb-fsevent', require: false
   gem 'rspec'
   gem 'rspec-rails'

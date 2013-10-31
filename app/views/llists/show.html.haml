@@ -14,9 +14,13 @@
       %div.panel-heading
         %h3.panel-title= @llist.current_litem.name
       %div.panel-body
-        &nbsp;
+        %p
+          = @llist.current_litem.count
+          = link_to 'done', done_llist_litem_path(@llist, @llist.current_litem), method: :post
+        - if @llist.current_litem.text
+          %pre= @llist.current_litem.text
 
   %div#litemPager
     %ul.pager
       %li.next
-        = link_to 'Next', next_llist_path(@llist)
+        = link_to 'next', next_llist_path(@llist)

@@ -3,7 +3,11 @@ Listy::Application.routes.draw do
     member do
       get 'next'
     end
-    resources :litems, :only => [ :new, :create ]
+    resources :litems, :only => [ :new, :create ] do
+      member do
+        post 'done'
+      end
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
