@@ -1,10 +1,8 @@
 common: &common
-  adapter: mysql2
+  adapter: postgresql
   database: listy_development
   pool: 5
   timeout: 5000
-  username: root
-  password: 
 
 development:
   <<: *common
