@@ -1,5 +1,6 @@
 common: &common
   adapter: postgresql
+  encoding: unicode
   database: listy_development
   pool: 5
   timeout: 5000

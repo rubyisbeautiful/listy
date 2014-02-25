@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.0'
+
 gem 'acts_as_list'
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.0.0'
