@@ -15,9 +15,3 @@
 /log/*.log
 /tmp
 
-.idea
-
-custom_plan.rb
-zeus.json
-
-config/database.yml

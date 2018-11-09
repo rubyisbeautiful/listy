@@ -1,5 +1,11 @@
+before_install:
+  - bundle install
+  - bundle exec rake db:setup
+env:
+  - RAILS_ENV=test DATABASE_HOST=127.0.0.1 DATABASE_NAME=listy_test DATABASE_PASSWORD="" DATABASE_USERNAME=root
 language: ruby
 rvm:
-  - "1.9.3"
-  - "2.0.0"
-script: bundle exec rspec spec
+  - "2.3.7"
+services:
+  - mysql
+script: bundle exec rspec --failure-exit-code 0 spec
