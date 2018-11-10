@@ -1,38 +1,33 @@
 source 'https://rubygems.org'
 
+ruby '2.3.7'
+
 gem 'acts_as_list'
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'execjs'
 gem 'formtastic'
 gem 'haml'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
-gem 'mysql2'
-gem 'rails', '4.0.0'
+gem 'mysql2', '~> 0.4.0'
+gem 'puma'
+gem 'rails', '~> 4'
+gem 'rails_12factor'
+gem 'rake', '< 11.0'
 gem 'sass-rails', '~> 4.0.0'
+gem 'therubyracer'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'unicorn'
-
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
 
 
 group :development, :test do
-  gem 'debugger'
-  gem 'factory_girl', '~> 4.0'
+  gem 'byebug'
+  gem 'factory_bot', '~> 4.0'
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rspec'
-  gem 'guard-zeus'
-  gem 'html2haml'
-  gem 'rb-inotify', require: false
-  gem 'rb-fchange', require: false
-  gem 'rb-fsevent', require: false
-  gem 'rspec'
-  gem 'rspec-rails'
-  gem 'simplecov'
+  gem 'rspec', '~> 2.99.0'
+  gem 'rspec-rails', '~> 2.99.0'
+  gem 'spring'
 end

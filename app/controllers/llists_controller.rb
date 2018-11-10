@@ -76,7 +76,7 @@ class LlistsController < ApplicationController
 
 
     def set_llist
-      @llist = Llist.find(params[:id])
+      @llist = Llist.find(params[:id]) if params[:id]
     end
 
 
