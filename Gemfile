@@ -1,24 +1,24 @@
 source 'https://rubygems.org'
 
-ruby '2.3.7'
+ruby '2.4.4'
 
 gem 'acts_as_list'
 gem 'bootstrap-sass'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 gem 'execjs'
 gem 'formtastic'
 gem 'haml'
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 gem 'jquery-rails'
-gem 'mysql2', '~> 0.4.0'
+gem 'mysql2'
 gem 'puma'
 gem 'rails', '~> 4'
 gem 'rails_12factor'
 gem 'rake', '< 11.0'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'therubyracer'
 gem 'turbolinks'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 
 group :development, :test do

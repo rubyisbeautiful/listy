@@ -12,7 +12,7 @@
   %div#current
     %div.panel.panel-active
       %div.panel-heading
-        %h3.panel-title= @llist.current_litem.name
+        %h3.panel-title= @llist.current_litem.try(:name)
       %div.panel-body
         %p
           = @llist.current_litem.count

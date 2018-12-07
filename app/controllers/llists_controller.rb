@@ -50,7 +50,7 @@ class LlistsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @llist.update(listy_list_params)
+      if @llist.update(llist_params)
         format.html { redirect_to @llist, notice: 'Listy list was successfully updated.' }
         format.json { head :no_content }
       else
@@ -64,7 +64,7 @@ class LlistsController < ApplicationController
   def destroy
     @llist.destroy
     respond_to do |format|
-      format.html { redirect_to listy_lists_url }
+      format.html { redirect_to llists_url }
       format.json { head :no_content }
     end
   end

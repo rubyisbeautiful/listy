@@ -1,6 +1,15 @@
 # listy [![Build Status](https://travis-ci.org/rubyisbeautiful/listy.png)](https://travis-ci.org/rubyisbeautiful/listy)
 
-## Description
+## WARNING
+
+*listy was created as a learning experiment while I was bored.
+It is not maintained or used.
+I updated recently due to automated security scan messages but otherwise use for anything or nothing, and
+at your own risk.*
+
+___
+
+## Original README
 
 listy is for simple lists of things.  Lists can be random or ordered.  List items have counts, text, etc
 
