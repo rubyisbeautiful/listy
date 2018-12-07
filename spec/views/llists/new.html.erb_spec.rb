@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "listy_lists/new" do
+describe "llists/new" do
   before(:each) do
     assign(:llist, stub_model(Llist).as_new_record)
   end
@@ -9,7 +9,7 @@ describe "listy_lists/new" do
     render
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "form[action=?][method=?]", listy_lists_path, "post" do
+    assert_select "form[action=?][method=?]", llists_path, "post" do
     end
   end
 end

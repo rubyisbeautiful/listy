@@ -4,31 +4,31 @@ describe LlistsController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/listy_lists").should route_to("listy_lists#index")
+      get("/llists").should route_to("llists#index")
     end
 
     it "routes to #new" do
-      get("/listy_lists/new").should route_to("listy_lists#new")
+      get("/llists/new").should route_to("llists#new")
     end
 
     it "routes to #show" do
-      get("/listy_lists/1").should route_to("listy_lists#show", :id => "1")
+      get("/llists/1").should route_to("llists#show", :id => "1")
     end
 
     it "routes to #edit" do
-      get("/listy_lists/1/edit").should route_to("listy_lists#edit", :id => "1")
+      get("/llists/1/edit").should route_to("llists#edit", :id => "1")
     end
 
     it "routes to #create" do
-      post("/listy_lists").should route_to("listy_lists#create")
+      post("/llists").should route_to("llists#create")
     end
 
     it "routes to #update" do
-      put("/listy_lists/1").should route_to("listy_lists#update", :id => "1")
+      put("/llists/1").should route_to("llists#update", :id => "1")
     end
 
     it "routes to #destroy" do
-      delete("/listy_lists/1").should route_to("listy_lists#destroy", :id => "1")
+      delete("/llists/1").should route_to("llists#destroy", :id => "1")
     end
 
   end

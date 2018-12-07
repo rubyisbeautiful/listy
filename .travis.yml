@@ -5,7 +5,7 @@ env:
   - RAILS_ENV=test DATABASE_HOST=127.0.0.1 DATABASE_NAME=listy_test DATABASE_PASSWORD="" DATABASE_USERNAME=root
 language: ruby
 rvm:
-  - "2.3.7"
+  - "2.4.4"
 services:
   - mysql
 script: bundle exec rspec --failure-exit-code 0 spec
